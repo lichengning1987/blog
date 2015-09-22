@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    .container.mgTop70
+        .row
+            .col-md-12
+               article.article
+                    h1
+                       a(href="/blog/#{blog._id}") #{blog.title}
+                    div.content
+                        p  #{blog.content}
+                    div.article-info
