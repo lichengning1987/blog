@@ -6,6 +6,7 @@ block content
             .col-md-12
                 form.form-horizontal(method="post",action="/admin/blog/new")
                       input(type="hidden",name="blog[_id]",value="#{blog._id}")
+                      input(type="hidden",name="blog[content]",id="info")
                       .form-group
                          label.col-sm-2.control-label(for="inputTitle") 文章标题
                          .col-sm-10
@@ -13,7 +14,8 @@ block content
                       .form-group
                          label.col-sm-2.control-label(for="inputContent") 文章内容
                          .col-sm-10
-                             input#inputContent.form-control(type="text",name="blog[content]",value="#{blog.content}")
+                            script(id="editor" type="text/plain" style="height:500px;")
                       .form-group
                           .col-sm-offset-2.col-sm-10
-                          button.btn.btn-default(type="submit") 录入
+                          input.btn.btn-default(type="submit" name="submit" value="录入")
+    script(src="/js/adminblog.js")

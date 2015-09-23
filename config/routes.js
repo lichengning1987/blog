@@ -4,7 +4,7 @@ var Blog = require('../app/control/blog');
 
 module.exports = function(app){
 
-    app.get('/',Index.index)
+    app.get('/',Index.index);
 
     app.get('/blog/:id',Blog.detail);
 
