@@ -1,16 +1,17 @@
 extends ../layout
 
 block content
-    .container.mgTop70
-        .row
-            each item in blogs
-                .col-md-12
-                   article.article
-                        h1
-                           a(href="/blog/#{item._id}") #{item.title}
-                        div.content
-                            p.hidcon  !{item.content}
-                        div.article-info
-                        div.readmore
-                            a(href="/blog/#{item._id}") +阅读全文
+    .col-main
+        .container
+            .row
+                each item in blogs
+                    .col-md-12
+                       article.article
+                            h1
+                               a(href="/blog/#{item._id}") #{item.title}
+                            div.content
+                                p.hidcon  !{item.content}
+                            div.article-info
+                            div.readmore
+                                a(href="/blog/#{item._id}") +阅读全文
     script(src="/js/admin.js")
